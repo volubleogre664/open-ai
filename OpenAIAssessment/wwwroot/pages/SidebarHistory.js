@@ -1,0 +1,1 @@
+import{i as o}from"./_plugin-vue_export-helper.eea841f3.js";import{C as m}from"./SidebarHistory.48c1cb68.js";import"./HistoryItem.0477f048.js";import"./index.521c4667.js";import"./_commonjsHelpers.99fcd647.js";window.customElements.define("SidebarHistory",o(m));

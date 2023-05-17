@@ -1,18 +1,38 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    height: 100% !important;
+}
+
+* {
+    font-family: "Popins", sans-serif;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #e2e2e2;
+}
+
+.page-wrapper {
+    flex: 1;
 }

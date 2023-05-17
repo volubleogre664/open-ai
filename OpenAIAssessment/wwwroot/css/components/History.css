@@ -1,0 +1,17 @@
+.dx-button {
+    color: #fff;
+    font-weight: semi-bold;
+    font-size: large;
+    padding: 10px 8px;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+    padding: 0;
+    height: 100%;
+    width: 350px;
+    background-color: #e2e2e2;
+}
