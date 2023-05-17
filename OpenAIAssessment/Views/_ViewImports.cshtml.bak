@@ -1,0 +1,3 @@
+﻿@using OpenAIAssessment
+@using OpenAIAssessment.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
