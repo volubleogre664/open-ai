@@ -1,5 +1,9 @@
 ﻿<template>
-    <p>The history here mate</p>
+    <div class="feature">
+        <h3>Chat</h3>
+        <p>Let AI help you with any burning question you might have.</p>
+        
+    </div>
 </template>
 
 <script lang="ts">
@@ -8,7 +12,11 @@
     export default defineComponent({
         name: "history-item",
 
-        props: {},
+        props: {
+            heading: String,
+            text: String,
+            url: String,
+        },
 
         components: {},
 
