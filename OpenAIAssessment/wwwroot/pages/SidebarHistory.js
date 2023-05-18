@@ -1,1 +1,1 @@
-import{i as o}from"./_plugin-vue_export-helper.44066382.js";import{C as m}from"./SidebarHistory.9d531888.js";import"./HistoryItem.8d32b643.js";import"./index.57b5ee2c.js";import"./_commonjsHelpers.99fcd647.js";window.customElements.define("SidebarHistory",o(m));
+import{i}from"./_plugin-vue_export-helper.34eb5909.js";import{S as o}from"./SidebarHistory.d7db90d4.js";import"./HistoryItem.420aed51.js";import"./index.daaf19ac.js";import"./_commonjsHelpers.99fcd647.js";window.customElements.define("SidebarHistory",i(o));
