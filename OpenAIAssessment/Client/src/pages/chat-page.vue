@@ -16,7 +16,7 @@
                     :max-hight="300"
                     :auto-resize-enabled="true"
                     width="100%"
-                    :value="message"
+                    @change="onTextAreaValueChanged($event)"
                     placeholder="Type a message..."
                 />
 
@@ -34,8 +34,27 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { DxTextArea, DxButton } from "devextreme-vue";
+import { createStore } from "devextreme-aspnet-data-nojquery";
 import SidebarHistory from "../components/SidebarHistory.vue";
 import ChatItem from "../components/ChatItem.vue";
+
+type Chat = {
+    message: string;
+    isMine: boolean;
+};
+
+const url = "/ChatWebAPI/";
+
+const chatStore = createStore({
+    key: "message",
+    loadUrl: url + "Get/",
+    insertUrl: url + "Post/",
+    insertMethod: "POST",
+    loadMethod: "GET",
+    onBeforeSend: function (method, ajaxOptions) {
+        ajaxOptions.xhrFields = { withCredentials: true };
+    },
+});
 
 export default defineComponent({
     name: "chat-page",
@@ -46,6 +65,9 @@ export default defineComponent({
 
     data() {
         return {
+            // chats: chatStore.load().then((data) => {
+            //     console.log(data);
+            // }),
             message: "",
             textAreaMaxHeight: "100%",
             chatItems: [
@@ -111,8 +133,27 @@ export default defineComponent({
 
     methods: {
         sendMessage() {
-            console.log(this.message);
+            let input = document.querySelector(
+                ".dx-texteditor-input"
+            ) as HTMLTextAreaElement;
+
+            this.message = input.value;
+
+            chatStore
+                .insert({
+                    message: this.message,
+                })
+                .then((data) => {
+                    console.log(data);
+
+                    this.chatItems.push({
+                        message: this.message,
+                        isMine: true,
+                    });
+                });
         },
+
+        onTextAreaValueChanged(e: any) {},
     },
 });
 </script>
