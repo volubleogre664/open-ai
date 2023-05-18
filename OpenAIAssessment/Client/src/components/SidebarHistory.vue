@@ -4,6 +4,7 @@
             :text="newChat"
             :click="startNewChat"
             :styling-mode="styleMode"
+            :isNewChat="true"
         />
 
         <HistoryItem
@@ -30,6 +31,114 @@ export default defineComponent({
             newChat: "New Chat",
             styleMode: "outlined",
             historyItems: [
+                {
+                    text: "Chat 1",
+                    click: () => {
+                        console.log("Chat 1");
+                    },
+                },
+                {
+                    text: "Chat 2",
+                    click: () => {
+                        console.log("Chat 2");
+                    },
+                },
+                {
+                    text: "Chat 3",
+                    click: () => {
+                        console.log("Chat 3");
+                    },
+                },
+                {
+                    text: "Chat 1",
+                    click: () => {
+                        console.log("Chat 1");
+                    },
+                },
+                {
+                    text: "Chat 2",
+                    click: () => {
+                        console.log("Chat 2");
+                    },
+                },
+                {
+                    text: "Chat 3",
+                    click: () => {
+                        console.log("Chat 3");
+                    },
+                },
+                {
+                    text: "Chat 1",
+                    click: () => {
+                        console.log("Chat 1");
+                    },
+                },
+                {
+                    text: "Chat 2",
+                    click: () => {
+                        console.log("Chat 2");
+                    },
+                },
+                {
+                    text: "Chat 3",
+                    click: () => {
+                        console.log("Chat 3");
+                    },
+                },
+                {
+                    text: "Chat 1",
+                    click: () => {
+                        console.log("Chat 1");
+                    },
+                },
+                {
+                    text: "Chat 2",
+                    click: () => {
+                        console.log("Chat 2");
+                    },
+                },
+                {
+                    text: "Chat 3",
+                    click: () => {
+                        console.log("Chat 3");
+                    },
+                },
+                {
+                    text: "Chat 1",
+                    click: () => {
+                        console.log("Chat 1");
+                    },
+                },
+                {
+                    text: "Chat 2",
+                    click: () => {
+                        console.log("Chat 2");
+                    },
+                },
+                {
+                    text: "Chat 3",
+                    click: () => {
+                        console.log("Chat 3");
+                    },
+                },
+                {
+                    text: "Chat 1",
+                    click: () => {
+                        console.log("Chat 1");
+                    },
+                },
+                {
+                    text: "Chat 2",
+                    click: () => {
+                        console.log("Chat 2");
+                    },
+                },
+                {
+                    text: "Chat 3",
+                    click: () => {
+                        console.log("Chat 3");
+                    },
+                },
                 {
                     text: "Chat 1",
                     click: () => {

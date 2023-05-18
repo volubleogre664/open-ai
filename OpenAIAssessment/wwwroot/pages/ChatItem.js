@@ -1,1 +1,1 @@
-import{d as e,o as t,c as n,_ as s,i as o}from"./_plugin-vue_export-helper.eea841f3.js";const m=e({name:"ChatItem",props:{},components:{},data(){return{}},methods:{}});function r(a,p,d,i,u,_){return t(),n("h1",null,"The text editor page")}const c=s(m,[["render",r],["__file","C:/Users/nduduzos/source/repos/OpenAIAssessment/OpenAIAssessment/Client/src/components/ChatItem.vue"]]);window.customElements.define("ChatItem",o(c));
+import{i as e}from"./_plugin-vue_export-helper.44066382.js";import{C as m}from"./ChatItem.f9ac750d.js";window.customElements.define("ChatItem",e(m));

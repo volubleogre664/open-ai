@@ -10,8 +10,11 @@
     flex-direction: column;
     align-items: center;
     align-self: flex-start;
+    position: relative;
     padding: 0;
     height: 100%;
     width: 350px;
-    background-color: #e2e2e2;
+    background-color: #7e7e7e;
+    overflow: hidden;
+    overflow-y: auto;
 }

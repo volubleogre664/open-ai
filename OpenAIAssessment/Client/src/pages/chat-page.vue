@@ -4,10 +4,10 @@
 
         <main class="chat-body">
             <div class="chat-bodyMain">
-                <DxTextArea
-                    :read-only="true"
-                    :max-hight="textAreaMaxHeight"
-                    :min-height="textAreaMaxHeight"
+                <ChatItem
+                    v-for="item in chatItems"
+                    :message="item.message"
+                    :isMine="item.isMine"
                 />
             </div>
 
@@ -21,8 +21,6 @@
                 />
 
                 <DxButton
-                    :width="50"
-                    :height="50"
                     text="Send"
                     styling-mode="contained"
                     type="default"
@@ -37,18 +35,77 @@
 import { defineComponent } from "vue";
 import { DxTextArea, DxButton } from "devextreme-vue";
 import SidebarHistory from "../components/SidebarHistory.vue";
+import ChatItem from "../components/ChatItem.vue";
 
 export default defineComponent({
     name: "chat-page",
 
     props: {},
 
-    components: { SidebarHistory, DxTextArea, DxButton },
+    components: { SidebarHistory, ChatItem, DxButton, DxTextArea },
 
     data() {
         return {
             message: "",
             textAreaMaxHeight: "100%",
+            chatItems: [
+                {
+                    message: "Hello",
+                    isMine: true,
+                },
+                {
+                    message: "Hi",
+                    isMine: false,
+                },
+                {
+                    message: "How are you?",
+                    isMine: true,
+                },
+                {
+                    message: "Fine, thanks",
+                    isMine: false,
+                },
+                {
+                    message: "And you?",
+                    isMine: false,
+                },
+                {
+                    message: "I'm fine too",
+                    isMine: true,
+                },
+                {
+                    message: "What are you doing?",
+                    isMine: true,
+                },
+                {
+                    message: "Hello",
+                    isMine: true,
+                },
+                {
+                    message: "Hi",
+                    isMine: false,
+                },
+                {
+                    message: "How are you?",
+                    isMine: true,
+                },
+                {
+                    message: "Fine, thanks",
+                    isMine: false,
+                },
+                {
+                    message: "And you?",
+                    isMine: false,
+                },
+                {
+                    message: "I'm fine too",
+                    isMine: true,
+                },
+                {
+                    message: "What are you doing?",
+                    isMine: true,
+                },
+            ],
         };
     },
 

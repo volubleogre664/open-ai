@@ -5,6 +5,7 @@
         type="normal"
         :styling-mode="stylingMode"
         :onClick="click"
+        :class="isNewChat ? 'new-chat' : ''"
     />
 </template>
 
@@ -29,6 +30,11 @@ export default defineComponent({
         click: {
             type: Function,
             required: true,
+        },
+
+        isNewChat: {
+            type: Boolean,
+            default: false,
         },
     },
 

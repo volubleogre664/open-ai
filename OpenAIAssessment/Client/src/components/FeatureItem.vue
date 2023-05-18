@@ -51,7 +51,7 @@ export default defineComponent({
 
     methods: {
         onClick() {
-            window.open(this.url);
+            window.open(this.url, "_self");
         },
     },
 });
