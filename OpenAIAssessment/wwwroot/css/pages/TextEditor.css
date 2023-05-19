@@ -38,7 +38,10 @@
 
 .textEditor-bodyFooter {
     width: 100%;
-    display: grid;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
     place-items: center;
 }
 

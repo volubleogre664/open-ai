@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="chat-item" :class="isMine ? 'mine' : 'not-mine'">
+        <div class="chat-item" :class="isBot ? 'not-mine' : 'mine'">
             <div class="chat-itemContent">
                 <p class="chat-itemContentMessage">{{ message }}</p>
             </div>
@@ -20,7 +20,7 @@ export default defineComponent({
             required: true,
         },
 
-        isMine: {
+        isBot: {
             type: Boolean,
             required: true,
         },

@@ -4,6 +4,8 @@ namespace OpenAIAssessment.Interfaces
 
     public interface IChatService
     {
-        Task<List<Chat>> GetChatResponse(string message);
+        Task<List<Chat>> PostChatResponse(Input input);
+
+        List<Chat> GetChatResponse(Input input);
     }
 }

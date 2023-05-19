@@ -1,5 +1,7 @@
 ﻿namespace OpenAIAssessment.WebAPIControllers
 {
+    using DevExtreme.AspNet.Data;
+    using DevExtreme.AspNet.Mvc;
     using Microsoft.AspNetCore.Mvc;
     using Newtonsoft.Json;
     using OpenAIAssessment.Interfaces;
@@ -15,11 +17,11 @@
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get(string message)
+        public IActionResult Get(DataSourceLoadOptions loadOptions, int historyId, bool isNewChat)
         {
-            var response = await this.chatService.GetChatResponse(message);
+            var response = this.chatService.GetChatResponse(new Input { HistoryId = historyId, IsNewChat = isNewChat });
 
-            return this.Ok(response);
+            return this.Ok(DataSourceLoader.Load(response, loadOptions));
         }
 
         [HttpPost]
@@ -27,8 +29,11 @@
         {
 
             var input = JsonConvert.DeserializeObject<Input>(values);
+
+            if (input == null)
+                return this.BadRequest(new[] { input });
             
-            var response = await this.chatService.GetChatResponse(input.Message);
+            var response = await this.chatService.PostChatResponse(input);
 
             return this.Ok(response);
         }
